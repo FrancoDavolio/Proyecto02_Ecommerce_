@@ -80,3 +80,18 @@ main {
 .carousel__indicadores .glider-dot.active{
     opacity: 1;
 }
+
+.fondoMarcas{
+    background-image: linear-gradient(to top, #26aeae 0%, #6b21c6 100%);
+}
+
+.carta{
+    width: 200px;
+    height: 200px;
+    border: solid 4px black;
+    opacity: 70%;
+}
+
+.carta:hover{
+    opacity: 100%;
+}
