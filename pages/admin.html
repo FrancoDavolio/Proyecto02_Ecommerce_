@@ -18,49 +18,34 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-light">
+        <nav class="navbar navbar-expand-lg bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand fs-2">TecnoRolling</a>
+                <a class="navbar-brand fs-2 text-light" aria-current="page" href="../index.html">TecnoRolling</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link fs-4" aria-current="page" href="../index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active fs-4" href="pages/admin.html">Administrador</a>
-                        </li>
-                    </ul>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">                   
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Buscar">
-                        <button class="btn btn-outline-dark" type="submit">Buscar</button>
+                        <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
                     </form>
-                    <ul class="navbar-nav  mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link fs-4"  href="pages/ingresarRegistrarse.html">Ingresar/Registrarse</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fs-4"  href="pages/">Carrito</a>
-                        </li>
-                    </ul>
+
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <section class="container">
+        <section class="container fuente">
             <div class=" text-center mt-5">
                 <h1>Tabla de componentes de Computadoras</h1>
             </div>
             <hr>
             <div>
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Agregar producto
+                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <i class="bi bi-clipboard-plus"></i>
                 </button>
 
                 <!-- Modal -->
