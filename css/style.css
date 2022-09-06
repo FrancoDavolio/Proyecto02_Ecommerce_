@@ -1,14 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap%27");
-/* .fuente{font-family: 'Roboto Mono', monospace;} */
-
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap%27");
-/* .fuente{font-family: 'Press Start 2P', cursive;} */
-
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
-/* .fuente{font-family: 'Oswald', sans-serif;} */
-
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap');
-.fuente{font-family: 'Teko', sans-serif;}
+
 body {
     background-image: linear-gradient(to top, #30cfd0 0%, #532d83 100%);
     background-attachment: fixed;
@@ -17,14 +8,11 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-.buscador {
-    text-align: center;
-}
-
-.boton{
-    background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);
-}
 
 main {
     flex-grow: 1;
+}
+
+.fuente {
+    font-family: 'Teko', sans-serif;
 }
