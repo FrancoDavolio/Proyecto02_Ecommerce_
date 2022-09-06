@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap');
+
+body {
+    background-image: linear-gradient(to top, #30cfd0 0%, #532d83 100%);
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.fuente {
+    font-family: 'Teko', sans-serif;
+}
+
+/* Carousel Marcas */
+
+.marco{
+    width: 150px;
+    height: 150px;
+    border:solid 5px black;
+}
+
+.carousel__contenedor {
+    position: relative;
+}
+
+.carousel__anterior,
+.carousel__siguiente {
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: none;
+    top: calc(50% - 35px);
+    border: nome;
+    cursor: pointer;
+    line-height: 30%;
+    text-align: center;
+    background: none;
+    color: rgb(6, 6, 6);
+    font-size: 50px;
+    opacity: 20%;
+}
+
+.carousel__anterior:hover,
+.carousel__siguiente:hover{
+    opacity: 100%;
+}
+
+.carousel__anterior {
+    left: -5px;
+}
+
+.carousel__siguiente {
+    right: 5px;
+}
+
+.carousel__elemento {
+    text-align: center;
+}
+
+.carousel__indicadores .glider-dot{
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: #fff;
+    opacity: .2;
+    border-radius: 0;
+}
+
+.carousel__indicadores .glider-dot:hover{
+    opacity: .5;
+}
+
+.carousel__indicadores .glider-dot.active{
+    opacity: 1;
+}
