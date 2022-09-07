@@ -81,15 +81,13 @@ main {
     opacity: 1;
 }
 
-.fondoMarcas{
-    background-image: linear-gradient(to top, #26aeae 0%, #6b21c6 100%);
-}
-
 .carta{
-    width: 200px;
+    width: 100%px;
     height: 200px;
     border: solid 4px black;
     opacity: 70%;
+    justify-content: center;
+    align-items: center;
 }
 
 .carta:hover{
