@@ -8,6 +8,9 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+.hombre{
+    color: white;
+}
 
 main {
     flex-grow: 1;
@@ -23,6 +26,7 @@ main {
     width: 150px;
     height: 150px;
     border:solid 5px black;
+    border-radius: 20px;
 }
 
 .carousel__contenedor {
@@ -117,7 +121,8 @@ main {
 .carta{
     width: 100%px;
     height: 200px;
-    border: solid 4px black;
+    border: solid 1px black;
+    border-radius: 20px;
     opacity: 70%;
     justify-content: center;
     align-items: center;
