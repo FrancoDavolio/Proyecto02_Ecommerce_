@@ -81,6 +81,39 @@ main {
     opacity: 1;
 }
 
+
+
+/*PAGINA REGISTRARSE*/
+
+#fondopag{
+    background-image: url(../img/48b2cfc0-301c-40c3-b30c-1f74f96c158bel_mejor_lugar_para_Gamers.webp) ;
+    background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.box{
+    background: hsla(0, 1%, 26%, 0.6);
+    border-radius: 10px;
+    height: 400px;
+    width: 480px;
+    margin-left: 400px;
+   
+}
+.btnIngresar{
+    margin-left: 120px;
+
+}
+
+.tituloSesion{
+    margin-left: 510px;
+}
+
+.fondoMarcas{
+    background-image: linear-gradient(to top, #26aeae 0%, #6b21c6 100%);
+}
+
 .carta{
     width: 100%px;
     height: 200px;
@@ -93,3 +126,4 @@ main {
 .carta:hover{
     opacity: 100%;
 }
+
