@@ -1,92 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Barroso Jacobo, Aguero Maria Jose, Gabriel Perlo, Franco Davolio">
+    <meta name="description" content="pagina web de un ecommerce que vende componetes de Pc">
+    <meta name="Keywords" content="">
     <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
+    <!-- Glider-css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Registrarse/Inicias Sesion</title>
+    <title>TecnoRolling</title>
 </head>
 <body id="fondopag">
     <header>
         <nav class="navbar navbar-expand-lg bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand fs-2 text-light" aria-current="page" href="index.html">TecnoRolling</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                <a class="navbar-brand fs-2 text-light" aria-current="page" href="../index.html"><img
+                        src="../img/logoProyecto.png" alt=""></a>
+                        <a href="../pages/admin.html">A</a>
+                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a href="pages/admin.html">A</a>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <button class="btn btn-outline-light ms-2" type="submit">
+                        <a class="hombre" href="pages/registrate.html">
+                            <i class="bi bi-person"></i>
+                        </a>
+                    </button>
+                    <button type="button" class="btn btn-outline-light position-relative ms-2">
+                        <i class="bi bi-cart4"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            0
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                    </button>
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                        <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
+                        <button class="btn btn-outline-light ms-2" type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                        <input class="form-control ms-2" type="search" placeholder="Buscar" aria-label="Buscar">
                     </form>
-                    <button class="btn btn-outline-light mx-2" type="submit"><i class="bi bi-person"></i></button>
-                    <button class="btn btn-outline-light" type="submit"><i class="bi bi-cart4"></i></button>
+                    
                 </div>
             </div>
         </nav>
     </header>
     <main>
         <section class="container ">
-           <h1 class="text-light my-3 tituloSesion">INICIA SESION</h1>
-           <aside class="row box">
+            <article class="row">
+            <div class="box">
+            <h1 class="text-light tituloSesion">INICIA SESION</h1>
+             <hr class="text-light">
+            <aside class=" px-2">
             <form>
-                <div class="mb-3 col-md-12 ">
+                <div class="mb-3 col-md-12 mt-4 ">
                   <label for="exampleInputEmail1" class="form-label text-light">Email/Usuario</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                   <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
                 <div class="mb-3 col-md-12 ">
-                  <label for="exampleInputPassword1" class="form-label text-light">Contraseña</label>
+                  <label for="exampleInputPassword1" class="form-label text-light ">Contraseña</label>
                   <input type="password" class="form-control" id="exampleInputPassword1">
                 </div>
-                <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label text-light" for="exampleCheck1">Recuerdame</label>
+                <div class="mb-3 col-md-12 ">
+                  <label for="exampleInputPassword1" class="form-label text-light ">Codigo Admin</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class=" form-check ">
+                  <input type="checkbox" class="form-check-input " id="exampleCheck1">
+                  <label class="form-check-label text-light " for="exampleCheck1">Recuerdame</label>
                 </div>
                 <div >
-                    <button type="submit" class="btn btn-primary col-md-6 btnIngresar">Ingrear</button>
+                    <button type="submit" class="btn btn-primary col-md-6 btnIngresar ">Ingresar</button>
                 </div>
-                 <div class="mt-3 text-light">
-                    <p>¿Aún no te registraste? <a href="#">Suscríbete ahora</a></p> 
-                 </div>
+               
                 
               </form>
            </aside>
+        </div>
+   
+
+        <div class="boxRegistrarse">
+            <h1 class="text-light tituloRegistrarse">REGISTRARSE</h1>
+             <hr class="text-light">
+            <aside class="row px-2">
+            <form>
+                <div class="mb-3 col-md-12  ">
+                  <label for="exampleInputEmail1" class="form-label text-light">Nombre de Usuario</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class=" col-md-12 ">
+                  <label for="exampleInputPassword1" class="form-label text-light ">Email</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="col-md-12 ">
+                  <label for="exampleInputPassword1" class="form-label text-light ">Contraseña</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="col-md-12 ">
+                  <label for="exampleInputPassword1" class="form-label text-light ">Confirmar Contraseña</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mt-2 form-check ">
+                  <input type="checkbox" class="form-check-input " id="exampleCheck1">
+                  <label class="form-check-label text-light " for="exampleCheck1">Recuerdame</label>
+                </div>
+                <div >
+                    <button type="submit" class="btn btn-primary col-md-6 btnRegistrarse ">Registrarse</button>
+                </div>
+               
+                
+              </form>
+           </aside>
+        </div>
+    </article>
 
           
         </section>
 
+        
+
        
     </main>
-    <footer>
-        class="text-center bg-dark text-light py-3">
-        <p class="m-0 text-secondary">
-            <small>By
-                <a href="https://github.com/earias08" class="text-secondary">Barroso Jacobo</a>
-                -
-                <a href="https://github.com/earias08" class="text-secondary">Aguero Maria Jose</a>
-                -
-                <a href="https://github.com/earias08" class="text-secondary">Gabriel Perlo</a>
-                -
-                <a href="https://github.com/earias08" class="text-secondary">Franco Davolio</a>
-                -
-                <a href="https://rollingcodeschool.com/" class="text-secondary">Rolling Code</a></small>
-        </p>
-        <p class="m-0 text-secondary">
-            <small>&copy; Todos los derechos reservados.</small>
-        </p>
+    <footer class="bg-dark text-light py-3">
+        <div class="container text-center ">
+            <img class="mb-3" src="../img/logoProyecto.png" alt="Logo de la pagina">
+            <p class="mb-3  text-secondary text-center ">
+                <small>By
+                    <a href="https://github.com/earias08" class="text-secondary">Barroso Jacobo</a>
+                    -
+                    <a href="https://github.com/earias08" class="text-secondary">Aguero Maria Jose</a>
+                    -
+                    <a href="https://github.com/earias08" class="text-secondary">Gabriel Perlo</a>
+                    -
+                    <a href="https://github.com/earias08" class="text-secondary">Franco Davolio</a>
+                    -
+                    <a href="https://rollingcodeschool.com/" class="text-secondary">Rolling Code</a></small>
+            </p>
+            <p class="m-0 text-secondary text-center ">
+                <small>&copy; Todos los derechos reservados.</small>
+            </p>
+        </div>
     </footer>
 
     <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <!-- Glider-js -->
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
