@@ -8,6 +8,9 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+.hombre{
+    color: white;
+}
 
 main {
     flex-grow: 1;
@@ -23,6 +26,7 @@ main {
     width: 150px;
     height: 150px;
     border:solid 5px black;
+    border-radius: 20px;
 }
 
 .carousel__contenedor {
@@ -96,18 +100,42 @@ main {
 .box{
     background: hsla(0, 1%, 26%, 0.6);
     border-radius: 10px;
-    height: 400px;
-    width: 480px;
-    margin-left: 400px;
+    height: 500px;
+    width: 400px;
+    margin-left: 150px;
+    margin-top: 40px;
+   
+}
+
+.boxRegistrarse{
+    background: hsla(0, 1%, 26%, 0.6);
+    border-radius: 10px;
+    height: 500px;
+    width: 600px;
+    margin-left: 150px;
+    margin-top: 40px;
    
 }
 .btnIngresar{
-    margin-left: 120px;
-
+    margin-left: 90px;
+    margin-top: 30px;
+   
+}
+.btnRegistrarse{
+    margin-left: 150px;
+    margin-top: 10px;
+   
+    
+   
 }
 
 .tituloSesion{
-    margin-left: 510px;
+    margin-left: 70px;
+   
+}
+.tituloRegistrarse{
+    margin-left: 180px;
+   
 }
 
 .fondoMarcas{
@@ -115,13 +143,106 @@ main {
 }
 
 .carta{
-    width: 200px;
+    width: 100%px;
     height: 200px;
-    border: solid 4px black;
+    border: solid 1px black;
+    border-radius: 20px;
     opacity: 70%;
+    justify-content: center;
+    align-items: center;
 }
 
 .carta:hover{
     opacity: 100%;
+}
+
+@media all and (max-width: 767px){
+    .box{
+        background: hsla(0, 1%, 26%, 0.6);
+        border-radius: 10px;
+        height: 500px;
+        width:340px;
+        margin-left: 10px;
+        margin-top: 40px;
+       
+    }
+
+    .btnIngresar{
+        margin-left: 100px;
+        margin-top: 30px;
+        width: 40%;
+       
+    }
+    .boxRegistrarse{
+        background: hsla(0, 1%, 26%, 0.6);
+        border-radius: 10px;
+        height: 500px;
+        width: 340px;
+        margin-left: 10px;
+        
+        margin-top: 40px;
+        margin-bottom: 10px;
+       
+    }
+    .tituloRegistrarse{
+        margin-left: 80px;
+       
+       
+    }
+    .btnRegistrarse{
+        margin-left: 100px;
+        margin-top: 10px;
+        width: 40%;
+       
+        
+       
+    }
+}
+
+@media all and (min-width: 767px) and (max-width: 991px){
+    .box{
+        background: hsla(0, 1%, 26%, 0.6);
+        border-radius: 10px;
+        height: 500px;
+        width:340px;
+        margin-left: 10px;
+        margin-top: 120px;
+       
+    }
+
+    .btnIngresar{
+        margin-left: 100px;
+        margin-top: 30px;
+        width: 40%;
+       
+    }
+    .boxRegistrarse{
+        background: hsla(0, 1%, 26%, 0.6);
+        border-radius: 10px;
+        height: 500px;
+        width: 340px;
+        margin-left: 25px;
+        
+        margin-top: 120px;
+        margin-bottom: 10px;
+       
+    }
+    .tituloRegistrarse{
+        margin-left: 60px;
+       
+       
+    }
+    .btnRegistrarse{
+        margin-left: 100px;
+        margin-top: 10px;
+        width: 40%;
+       
+        
+       
+    }
+    .tituloSesion{
+        margin-left: 55px;
+       
+    }
 }
 
