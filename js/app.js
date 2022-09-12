@@ -30,11 +30,11 @@ window.addEventListener("load", function () {
 
 
 // verrificar el localStorage
-let listaProducto = JSON.parse(localStorage.getItem("listaProductoKey")) || [];
+let listadeComponentes = JSON.parse(localStorage.getItem("listaComponentesKey")) || [];
 let padre = document.querySelector("#grillaProducto");
 
-if (listaProducto.length > 0) {
-  listaProducto.map((producto) => {
+if (listadeComponentes.length > 0) {
+  listadeComponentes.map((producto) => {
     crearColumna(producto);
   });
 } else {
@@ -44,11 +44,11 @@ if (listaProducto.length > 0) {
 function crearColumna(producto){
   console.log(producto);
   padre.innerHTML += ` <div class="card col-md-3 m-3" style="width: 18rem;">
-  <img src="${producto.modificarImagen}" class="card-img-top" alt="monitor">
+  <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
   <div class="card-body">
-      <h5 class="card-title">${producto.modificarNombre}</h5>
-      <p class="card-text">Precio:${producto.modificarPrecio} </p>
-      <button class="btn btn-primary" type="button" onclick="verDetalle(´${producto.modificarCodigo}´)">Ver mas</button>
+      <h5 class="card-title">${producto.nombre}</h5>
+      <p class="card-text">Precio:${producto.precio} </p>
+      <button class="btn btn-primary" type="button" onclick="verDetalle(´${producto.codigo}´)">Ver mas</button>
   </div>
 </div>`;
 }
