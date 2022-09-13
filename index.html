@@ -32,10 +32,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <a href="pages/admin.html">A</a>
                     <form class="d-flex" role="search">
-                        <input class="form-control ms-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                        <button class="btn btn-outline-light ms-2" type="submit">
-                            <i class="bi bi-search"></i>
-                        </button>
+                        <input class="form-control ms-2" type="search" placeholder="Buscar" aria-label="Buscar" id="inputBuscar" onkeyup=" buscar()">
                     </form>
                     <button class="btn btn-outline-light ms-2 my-2" type="submit">
                         <a class="hombre" href="pages/registrate.html">
@@ -91,82 +88,7 @@
                 </button>
             </div>
         </section>
-        <section class="my-5 container">
-            <h1 class="text-center mb-5 fuente display-3 text-light">Busca por Categoria</h1>
-            <div class="carousel row">
-                <div class="carousel__contenedor col-12">
-                    <button aria-label="Anterior" class="carousel__anterior">
-                        <i class="bi bi-caret-left"></i>
-                    </button>
-                    <div class="carousel__lista">
-                        <div class="carousel__elemento">
-                            <a href=""><img src="img/SSD.jpg" class="marco" alt="SSD"></a>
-                            <p>Almacenamiento</p>
-                        </div>
-                        <div class="carousel__elemento">
-                            <a href=""><img src="img/Procesador.jpg" class="marco" alt="Microprocesador"></a>
-                            <p>Microprocesadores</p>
-                        </div>
-                        <div class="carousel__elemento">
-                            <a href=""><img src="img/Gabinete.jpg" class="marco" alt="Gabinetes"></a>
-                            <p>Gabinetes</p>
-                        </div>
-                        <div class="carousel__elemento">
-                            <a href=""><img src="img/silla.jpg" class="marco" alt="Silla Gamer"></a>
-                            <p>Sillas</p>
-                        </div>
-                        <div class="carousel__elemento">
-                            <a href=""><img src="img/Teclado.jpg" class="marco" alt="Teclados"></a>
-                            <p>Teclados</p>
-                        </div>
-                        <div class="carousel__elemento">
-                            <a href=""><img src="img/mause.jpg" class="marco" alt="Mouse"></a>
-                            <p>Mouses</p>
-                        </div>
-                        <div class="carousel__elemento">
-                            <a href=""><img src="img/placaMadre.jpg" class="marco" alt="Placa Madre"></a>
-                            <p>Placas Madres</p>
-                        </div>
-                        <div class="carousel__elemento">
-                            <a href=""><img src="img/placaDeVideo.jpg" class="marco" alt="Placa de video"></a>
-                            <p>Placas de video</p>
-                        </div>
-                        <div class="carousel__elemento">
-                            <a href=""><img src="img/notebooks.jpg" class="marco" alt="Notebooks"></a>
-                            <p>Notebooks</p>
-                        </div>
-                        <div class="carousel__elemento">
-                            <a href=""><img src="img/microfono.jpg" class="marco" alt="Microfono"></a>
-                            <p>Microfonos</p>
-                        </div>
-                        <div class="carousel__elemento">
-                            <a href=""><img src="img/memoriasRam.jpg" class="marco" alt="Memorias Ram"></a>
-                            <p>Memorias Ram</p>
-                        </div>
-                        <div class="carousel__elemento">
-                            <a href=""><img src="img/manitor.jpg" class="marco" alt="Monitor"></a>
-                            <p>Monitores</p>
-                        </div>
-                        <div class="carousel__elemento">
-                            <a href=""><img src="img/Fuente.jpg" class="marco" alt="Fuente"></a>
-                            <p>Fuentes</p>
-                        </div>
-                        <div class="carousel__elemento">
-                            <a href=""><img src="img/Camara.jpg" class="marco" alt="Camaras"></a>
-                            <p>Camaras</p>
-                        </div>
-                        <div class="carousel__elemento">
-                            <a href=""><img src="img/auriculares.jpg" class="marco" alt="Auricular"></a>
-                            <p>Auriculares</p>
-                        </div>
-                    </div>
-                    <button aria-label="Siguiente" class="carousel__siguiente">
-                        <i class="bi bi-caret-right"></i>
-                    </button>
-                </div>
-                <div role="tablist" class="carousel__indicadores"></div>
-            </div>
-        </section>
+        
         <section class="container">
             <h2 class="text-center py-3 fuente display-3 text-light">Algunas de las mejores marcas</h2>
             <div>
@@ -206,7 +128,83 @@
                 </div>
             </div>
         </section>
-        <section class="container">
+        <section class="my-5 container">
+            <h1 class="text-center mb-5 fuente display-3 text-light">Busca por Categoria</h1>
+            <div class="carousel row">
+                <div class="carousel__contenedor col-12">
+                    <button aria-label="Anterior" class="carousel__anterior">
+                        <i class="bi bi-caret-left"></i>
+                    </button>
+                    <div class="carousel__lista" id="buttons">
+                        <div class="carousel__elemento">
+                            <a href="#"><img src="img/SSD.jpg" class="marco" alt="SSD"></a>
+                            <p>Almacenamiento</p>
+                        </div>
+                        <div class="carousel__elemento">
+                            <a href="#"><img src="img/Procesador.jpg" class="marco" alt="Microprocesador"></a>
+                            <p>Microprocesadores</p>
+                        </div>
+                        <div class="carousel__elemento">
+                            <a href="#"><img src="img/Gabinete.jpg" class="marco" alt="Gabinetes"></a>
+                            <p>Gabinetes</p>
+                        </div>
+                        <div class="carousel__elemento">
+                            <a href="#"><img src="img/silla.jpg" class="marco" alt="Silla Gamer"></a>
+                            <p>Sillas</p>
+                        </div>
+                        <div class="carousel__elemento">
+                            <a href="#"><img src="img/Teclado.jpg" class="marco" alt="Teclados"></a>
+                            <p>Teclados</p>
+                        </div>
+                        <div class="carousel__elemento">
+                            <a href="#"><img src="img/mause.jpg" class="marco" alt="Mouse"></a>
+                            <p>Mouses</p>
+                        </div>
+                        <div class="carousel__elemento">
+                            <a href="#"><img src="img/placaMadre.jpg" class="marco" alt="Placa Madre"></a>
+                            <p>Placas Madres</p>
+                        </div>
+                        <div class="carousel__elemento">
+                            <a href="#"><img src="img/placaDeVideo.jpg" class="marco" alt="Placa de video"></a>
+                            <p>Placas de video</p>
+                        </div>
+                        <div class="carousel__elemento">
+                            <a href="#"><img src="img/notebooks.jpg" class="marco" alt="Notebooks"></a>
+                            <p>Notebooks</p>
+                        </div>
+                        <div class="carousel__elemento">
+                            <a href="#"><img src="img/microfono.jpg" class="marco" alt="Microfono"></a>
+                            <p>Microfonos</p>
+                        </div>
+                        <div class="carousel__elemento">
+                            <a href="#"><img src="img/memoriasRam.jpg" class="marco" alt="Memorias Ram"></a>
+                            <p>Memorias Ram</p>
+                        </div>
+                        <div class="carousel__elemento">
+                            <a href="#"><img src="img/manitor.jpg" class="marco" alt="Monitor"></a>
+                            <p>Monitores</p>
+                        </div>
+                        <div class="carousel__elemento">
+                            <a href="#"><img src="img/Fuente.jpg" class="marco" alt="Fuente"></a>
+                            <p>Fuentes</p>
+                        </div>
+                        <div class="carousel__elemento">
+                            <a href="#"><img src="img/Camara.jpg" class="marco" alt="Camaras"></a>
+                            <p>Camaras</p>
+                        </div>
+                        <div class="carousel__elemento">
+                            <a href="#"><img src="img/auriculares.jpg" class="marco" alt="Auricular"></a>
+                            <p>Auriculares</p>
+                        </div>
+                    </div>
+                    <button aria-label="Siguiente" class="carousel__siguiente">
+                        <i class="bi bi-caret-right"></i>
+                    </button>
+                </div>
+                <div role="tablist" class="carousel__indicadores"></div>
+            </div>
+        </section>
+        <section class="container" id="mySection">
             <h2 class="text-center py-3 fuente display-3 text-light">Nuestros Productos</h2>
             <div class="row justify-content-evenly pb-5" id="grillaProducto">
 

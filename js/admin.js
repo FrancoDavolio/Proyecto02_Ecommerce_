@@ -146,11 +146,21 @@ tBody.innerHTML = listadeComponentes.map(product =>
                   <label for="categoria">Categoria</label>
                   <select id="categoriaModalMod" class="form-control">
                       <option value="loElegido">${product.categoria}</option>
-                      <option value="placaDeVideo">placaDeVideo</option>
+                      <option value="placaDeVideo">Placa De Video</option>
                       <option value="placaMadre">Placa Madre</option>
                       <option value="microprocesador">Microprocesador</option>
                       <option value="camaras">Camara</option>
                       <option value="sillas">Sillas</option>
+                      <option value="mouses">Mouses</option>
+                      <option value="monitores">Monitores</option>
+                      <option value="auriculares">Auriculares</option>
+                      <option value="teclados">Teclados</option>
+                      <option value="gabinetes">Gabinetes</option>
+                      <option value="almacenamientos">Almacenamiento</option>
+                      <option value="memoriasRam">Memorias Ram</option>
+                      <option value="microfonos">Microfonos</option>
+                      <option value="fuentes">Fuentes</option>
+                      <option value="notebooks">Notebooks</option>
                   </select>
               </div>
              
