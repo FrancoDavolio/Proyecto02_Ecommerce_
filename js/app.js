@@ -43,12 +43,12 @@ if (listadeComponentes.length > 0) {
 }
 
 function crearColumna(producto) {
-  console.log(producto);
   padre.innerHTML += ` <article class="card col-md-3 m-3" style="width: 18rem;">
   <img src="${producto.imagen}" class="card-img-top h-100 w-100" alt="${producto.nombre}">
-  <div class="card-body ${producto.categoria}">
+  <div class="card-body">
       <h5 class="card-title">${producto.nombre}</h5>
       <p class="card-text">Precio:${producto.precio} </p>
+      <p class="card-text">Categoria: ${producto.categoria} </p>
       <button class="btn btn-primary" type="button" onclick="verDetalle('${producto.codigo}')">Ver mas</button>
   </div>
 </article>`;
@@ -84,3 +84,23 @@ function buscar() {
   }
 }
 
+function filtercat(categoria){
+  let section, articles, i, categoriaarticle;
+  section = document.getElementById("mySection");
+  articles = section.getElementsByTagName("article");
+  for (i = 0; i < articles.length; i++) {
+
+    categoriaarticle= articles[i].getElementsByClassName("card-body")[0].getElementsByClassName("card-text")[1].innerHTML;
+    if(categoriaarticle){
+      let arrayCategoria = categoriaarticle.split(" ");
+      for (let filtro of arrayCategoria) {
+
+        if (categoriaarticle.toUpperCase().indexOf(categoria.toUpperCase()) > -1) {
+          articles[i].style.display = "flex";
+        }else{
+          articles[i].style.display = "none";
+        }
+      }
+    }
+  }
+}
