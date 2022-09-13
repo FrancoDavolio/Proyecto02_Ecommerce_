@@ -59,27 +59,25 @@ function verDetalle(codigo){
 }
 
 function buscar() {
-  let input, filter, section, article, h5, i;
+  let input, filter, section, articles, h5, i;
   input = document.getElementById("inputBuscar");
   filter = input.value.toUpperCase();
   section = document.getElementById("mySection");
-  article = section.getElementsByTagName("article");
+  articles = section.getElementsByTagName("article"); 
 
-  for (i = 0; i < article.length; i++) {
-    h5 = article[i].getElementsByClassName("h5")[0];
+
+  for (i = 0; i < articles.length; i++) {
+    let h5= articles[i].getElementsByClassName("card-body")[0].getElementsByClassName("card-title");
     if (h5) {
       let palabrasEnFiltro = filter.split(" ");
-      let hallado = 0;
+  
       for (let filtro of palabrasEnFiltro) {
-        if (h5.innerHTML.toUpperCase().indexOf(filter) < -1) {
-          hallado++;
-        }
-      }
 
-      if (hallado === palabrasEnFiltro.length) {
-        article[i].style.display = " ";
-      } else {
-        article[i].style.display = "none";
+        if (h5[0].innerHTML.toUpperCase().indexOf(filter) > -1) {
+          articles[i].style.display = "flex";
+        }else{
+          articles[i].style.display = "none";
+        }
       }
     }
   }
