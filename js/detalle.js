@@ -29,8 +29,8 @@ seccionDetalle.innerHTML = `<div class="card mb-3">
             <p class="card-text">Categoria: ${componenteBuscado.categoria}</p>
         </div>
         <div>
-                <button class="btn btn-dark"><a class="text-decoration-none text-light" href="">Comprar ahora</a></button>
-                <button class="btn btn-dark"><a class="text-decoration-none text-light" href="">Añadir al Carrito</a></button>
+                <button class="btn btn-dark"><a class="text-decoration-none text-light" href="../pages/pag404.html">Comprar ahora</a></button>
+                <button class="btn btn-dark"><a class="text-decoration-none text-light" href="../pages/pag404.html">Añadir al Carrito</a></button>
         </div>
     </div>
 </div>
