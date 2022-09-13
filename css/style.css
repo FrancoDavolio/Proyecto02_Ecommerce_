@@ -98,12 +98,12 @@ header {
 
 /*PAGINA REGISTRARSE*/
 
-#fondopag {
-    background-image: url(../img/banner1.webp);
+#fondopag{
+    background-image: url(../img/banner1.webp) ;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
 }
 
 
@@ -115,7 +115,7 @@ header {
     width: 600px;
     margin-left: 370px;
     margin-top: 40px;
-
+   
 }
 
 .btnRegistrarse{
@@ -139,7 +139,7 @@ header {
     background-image: linear-gradient(to top, #26aeae 0%, #6b21c6 100%);
 }
 
-.carta {
+.carta{
     width: 100%px;
     height: 200px;
     border: solid 1px black;
@@ -148,118 +148,97 @@ header {
     justify-content: center;
     align-items: center;
 }
-.carta2{
-    width: 100%px;
-    height: 100px;
-    padding: 25px;
-    text-align: center;
-    border: solid 1px black;
-    border-radius: 20px;
-    opacity: 80%;
-    justify-content: center;
-    align-content: center;
-}
-.final{
-    text-decoration: none;
-}
 
-.carta:hover {
+.carta:hover{
     opacity: 100%;
 }
 
-@media all and (max-width: 767px) {
-    .box {
+@media all and (max-width: 767px){
+    .box{
         background: hsla(0, 1%, 26%, 0.6);
         border-radius: 10px;
         height: 500px;
-        width: 340px;
+        width:340px;
         margin-left: 11px;
         margin-top: 40px;
-
+       
     }
 
-    .btnIngresar {
+    .btnIngresar{
         margin-left: 100px;
         margin-top: 30px;
         width: 40%;
-
+       
     }
-
-    .boxRegistrarse {
+    .boxRegistrarse{
         background: hsla(0, 1%, 26%, 0.6);
         border-radius: 10px;
         height: 500px;
         width: 340px;
         margin-left: 11px;
-
+        
         margin-top: 40px;
         margin-bottom: 10px;
-
+       
     }
-
-    .tituloRegistrarse {
+    .tituloRegistrarse{
         margin-left: 80px;
-
-
+       
+       
     }
-
-    .btnRegistrarse {
+    .btnRegistrarse{
         margin-left: 100px;
         margin-top: 10px;
         width: 40%;
-
-
-
+       
+        
+       
     }
 }
 
-@media all and (min-width: 767px) and (max-width: 991px) {
-    .box {
+@media all and (min-width: 767px) and (max-width: 991px){
+    .box{
         background: hsla(0, 1%, 26%, 0.6);
         border-radius: 10px;
         height: 500px;
-        width: 340px;
+        width:340px;
         margin-left: 10px;
         margin-top: 120px;
-
+       
     }
 
-    .btnIngresar {
+    .btnIngresar{
         margin-left: 100px;
         margin-top: 30px;
         width: 40%;
-
+       
     }
-
-    .boxRegistrarse {
+    .boxRegistrarse{
         background: hsla(0, 1%, 26%, 0.6);
         border-radius: 10px;
         height: 500px;
         width: 340px;
         margin-left: 25px;
-
+        
         margin-top: 120px;
         margin-bottom: 10px;
-
+       
     }
-
-    .tituloRegistrarse {
+    .tituloRegistrarse{
         margin-left: 60px;
-
-
+       
+       
     }
-
-    .btnRegistrarse {
+    .btnRegistrarse{
         margin-left: 100px;
         margin-top: 10px;
         width: 40%;
-
-
-
+       
+        
+       
     }
-
-    .tituloSesion {
+    .tituloSesion{
         margin-left: 55px;
-
+       
     }
 }

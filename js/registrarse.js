@@ -59,6 +59,3 @@ function crearPersona(e) {
   //aqui voy a guardar todas las peliculas
 let listaUsuario =
 JSON.parse(localStorage.getItem("listaUsuarioKey")) || [];
-
-
-

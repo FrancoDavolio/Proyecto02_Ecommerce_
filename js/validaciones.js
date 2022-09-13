@@ -20,4 +20,3 @@ export function validarContraseña(input){
         return false;
     }
 }
-
