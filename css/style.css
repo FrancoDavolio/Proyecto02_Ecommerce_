@@ -106,50 +106,36 @@ header {
     background-position: center center;
 }
 
-.box {
+
+
+.boxRegistrarse{
     background: hsla(0, 1%, 26%, 0.6);
     border-radius: 10px;
-    height: 500px;
-    width: 400px;
-    /* margin-left: 20px; */
-    margin: 40px;
-
-}
-
-.boxRegistrarse {
-    background: hsla(0, 1%, 26%, 0.6);
-    border-radius: 10px;
-    height: 500px;
+    height: 520px;
     width: 600px;
-    margin-left: 110px;
+    margin-left: 370px;
     margin-top: 40px;
 
 }
 
-.btnIngresar {
-    margin-left: 90px;
-    margin-top: 30px;
-
-}
-
-.btnRegistrarse {
+.btnRegistrarse{
     margin-left: 150px;
-    margin-top: 10px;
-
+    margin-top: 40px;
+   
+    
+   
 }
 
-.tituloSesion {
-    /* margin-left: 70px; */
-    text-align: center;
+.tituloSesion{
+    margin-left: 70px;
+   
+}
+.tituloRegistrarse{
+    margin-left: 180px;
+   
 }
 
-.tituloRegistrarse {
-    /* margin-left: 180px; */
-    text-align: center;
-
-}
-
-.fondoMarcas {
+.fondoMarcas{
     background-image: linear-gradient(to top, #26aeae 0%, #6b21c6 100%);
 }
 
