@@ -56,63 +56,42 @@
     <main>
         <section class="container ">
             <article class="row">
-            <div class="box">
-            <h1 class="text-light tituloSesion">INICIA SESION</h1>
-             <hr class="text-light">
-            <aside class=" px-2">
-            <form>
-                <div class="mb-3 col-md-12 mt-4 ">
-                  <label for="exampleInputEmail1" class="form-label text-light">Email/Usuario</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                </div>
-                <div class="mb-3 col-md-12 ">
-                  <label for="exampleInputPassword1" class="form-label text-light ">Contraseña</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
-                </div>
-                <div class="mb-3 col-md-12 ">
-                  <label for="exampleInputPassword1" class="form-label text-light ">Codigo Admin</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
-                </div>
-                <div class=" form-check ">
-                  <input type="checkbox" class="form-check-input " id="exampleCheck1">
-                  <label class="form-check-label text-light " for="exampleCheck1">Recuerdame</label>
-                </div>
-                <div >
-                    <button type="submit" class="btn btn-primary col-md-6 btnIngresar ">Ingresar</button>
-                </div>
-               
-                
-              </form>
-           </aside>
+           
+           
         </div>
    
 
         <div class="boxRegistrarse">
-            <h1 class="text-light tituloRegistrarse">REGISTRARSE</h1>
+            <h1 class="text-light tituloRegistrarse">Iniciar Sesión</h1>
              <hr class="text-light">
             <aside class="row px-2">
-            <form>
-                <div class="mb-3 col-md-12  ">
-                  <label for="exampleInputEmail1" class="form-label text-light">Nombre de Usuario</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            <form id="registro">
+                <div class="mb-3 col-md-12  mt-4">
+                  <label  class="form-label text-light" for="usuario">Nombre de Usuario</label>
+
+                  <input type="text" class="form-control"  id="usuario" required >
+                  
+                 
                 </div>
-                <div class=" col-md-12 ">
-                  <label for="exampleInputPassword1" class="form-label text-light ">Email</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
+
+                
+
+
+                <div class=" col-md-12 mt-4">
+                  <label  class="form-label text-light " for="email">Email</label>
+                  <input type="email" class="form-control"  id="email" required>
+                  
                 </div>
-                <div class="col-md-12 ">
-                  <label for="exampleInputPassword1" class="form-label text-light ">Contraseña</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
+                <div class="col-md-12 mt-4">
+                  <label class="form-label text-light " for="contraseña" >Contraseña</label>
+                  <input type="password" class="form-control" id="contraseña" required>
+                  <div class="invalid-feedback">Debe tener mas de 6 caracteres</div>
+                  <div class="valid-feedback">Dato correcto</div>
                 </div>
-                <div class="col-md-12 ">
-                  <label for="exampleInputPassword1" class="form-label text-light ">Confirmar Contraseña</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
-                </div>
-                <div class="mt-2 form-check ">
-                  <input type="checkbox" class="form-check-input " id="exampleCheck1">
-                  <label class="form-check-label text-light " for="exampleCheck1">Recuerdame</label>
+                
+                <div class="mt-4 form-check ">
+                  <input type="checkbox" class="form-check-input " >
+                  <label class="form-check-label text-light " >¿Aún no te registraste? <a href="#">Ingresa aquí</a></label>
                 </div>
                 <div >
                     <button type="submit" class="btn btn-primary col-md-6 btnRegistrarse ">Registrarse</button>
@@ -158,6 +137,8 @@
         crossorigin="anonymous"></script>
     <!-- Glider-js -->
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="../js/app.js"></script>
+  
+    <script src="../js/registrarse.js" type="module"></script>
 </body>
 </html>
