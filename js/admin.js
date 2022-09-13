@@ -1,8 +1,16 @@
 import { Producto } from "./class.js";
-//    
+import {
+  validarCodigo,
+  validarNombre,
+  validarDescripcion,
+  validarUrl,
+  validarPrecio,
+  validarCategoria,
+  validarStock,
+} from "./helpers.js";
 
 let listadeComponentes =
-    JSON.parse(localStorage.getItem("listaComponentesKey")) || [];
+  JSON.parse(localStorage.getItem("listaComponentesKey")) || [];
 
 //traer los input
 let codigo = document.querySelector("#codigo");
@@ -15,48 +23,83 @@ let categoria = document.querySelector("#categoria");
 let formComponentes = document.querySelector("#formComponentes");
 let guargarComp = document.querySelector("#guargarComp");
 let btnCrearComp = document.querySelector("#btnCrearComp");
-let tBody = document.querySelector('#tBodyTabla')
+let tBody = document.querySelector("#tBodyTabla");
 
-const modalAdminComponentes = new bootstrap.Modal(document.querySelector("#modalComp"));
+const modalAdminComponentes = new bootstrap.Modal(
+  document.querySelector("#modalComp")
+);
 
-btnCrearComp.addEventListener('click', crearComp);
-formComponentes.addEventListener('submit', guardarComponente);
+btnCrearComp.addEventListener("click", crearComp);
+formComponentes.addEventListener("submit", guardarComponente);
 
 function crearComp() {
-    modalAdminComponentes.show();
-    codigo.value = (uuidv4());
+  modalAdminComponentes.show();
+  codigo.value = uuidv4();
 }
 // console.log(uuidv4());
 
-function guardarComponente(e) {
-    e.preventDefault();
+codigo.addEventListener("blur", () => {
+  validarCodigo(codigo);
+});
+nombre.addEventListener("blur", () => {
+  validarNombre(nombre);
+});
+descripcion.addEventListener("blur", () => {
+  validarDescripcion(descripcion);
+});
+imagen.addEventListener("blur", () => {
+  validarUrl(imagen);
+});
+precio.addEventListener("blur", () => {
+  validarPrecio(precio);
+});
+stock.addEventListener("blur", () => {
+  validarStock(stock);
+});
+categoria.addEventListener("blur", () => {
+  validarCategoria(categoria);
+});
 
+function guardarComponente(e) {
+  e.preventDefault();
+  if (
+    validarCodigo(codigo) === true &&
+    validarNombre(nombre) === true &&
+    validarDescripcion(descripcion) === true &&
+    validarUrl(imagen) === true &&
+    validarPrecio(precio) === true &&
+    validarStock(stock) === true &&
+    validarCategoria(categoria) === true
+  ) {
     let nuevoProducto = new Producto(
-        codigo.value,
-        nombre.value,
-        descripcion.value,
-        imagen.value,
-        precio.value,
-        stock.value,
-        categoria.value);
+      codigo.value,
+      nombre.value,
+      descripcion.value,
+      imagen.value,
+      precio.value,
+      stock.value,
+      categoria.value
+    );
     console.log(Producto);
     listadeComponentes.push(nuevoProducto);
     limpiarFormulario();
     console.log(listadeComponentes);
     modalAdminComponentes.hide();
-    localStorage.setItem("listaComponentesKey", JSON.stringify(listadeComponentes));
-
-
-
+    localStorage.setItem(
+      "listaComponentesKey",
+      JSON.stringify(listadeComponentes)
+    );
+  }
 }
 
 function limpiarFormulario() {
-    formComponentes.reset();
+  formComponentes.reset();
 }
 
-console.log('lista', listadeComponentes)
+console.log("lista", listadeComponentes);
 
-tBody.innerHTML = listadeComponentes.map(product =>
+tBody.innerHTML = listadeComponentes.map(
+  (product) =>
     `<tr>
     <th scope="row">${product.codigo}</th>
     <td>${product.nombre}</td>
@@ -199,49 +242,47 @@ tBody.innerHTML = listadeComponentes.map(product =>
     </td>
 
     </tr>`
-)
-
+);
 
 window.borrarProducto = function (codigo) {
-    let compFiltrado = listadeComponentes.filter(
-        (componente) => componente.codigo != codigo
-    );
-    console.log(compFiltrado)
-    localStorage.setItem('listaComponentesKey', JSON.stringify(compFiltrado))
-    location.href = '../pages/admin.html'
-}
+  let compFiltrado = listadeComponentes.filter(
+    (componente) => componente.codigo != codigo
+  );
+  console.log(compFiltrado);
+  localStorage.setItem("listaComponentesKey", JSON.stringify(compFiltrado));
+  location.href = "../pages/admin.html";
+};
 
 window.modificar = function (codigo) {
-    let nombreModal = document.querySelector('#nombreModalMod').value
-    let descripcionModal = document.querySelector('#descripcionModalMod').value
-    let imagenModal = document.querySelector('#imagenModalMod').value
-    let precioModal = document.querySelector('#precioModalMod').value
-    let stockModal = document.querySelector('#stockModalMod').value
-    let categoriaModal = document.querySelector('#categoriaModalMod').value
+  let nombreModal = document.querySelector("#nombreModalMod").value;
+  let descripcionModal = document.querySelector("#descripcionModalMod").value;
+  let imagenModal = document.querySelector("#imagenModalMod").value;
+  let precioModal = document.querySelector("#precioModalMod").value;
+  let stockModal = document.querySelector("#stockModalMod").value;
+  let categoriaModal = document.querySelector("#categoriaModalMod").value;
 
-    const arrayProd = []
+  const arrayProd = [];
 
-    for (let i = 0; i < listadeComponentes.length; i++) {
-        const producto = listadeComponentes[i];
+  for (let i = 0; i < listadeComponentes.length; i++) {
+    const producto = listadeComponentes[i];
 
-        if (producto.codigo === codigo) {
-            const newObj = {
-                codigo,
-                categoria: categoriaModal,
-                descripcion: descripcionModal,
-                imagen: imagenModal,
-                nombre: nombreModal,
-                precio: precioModal,
-                stock: stockModal
-            }
-            arrayProd.push(newObj)
-        } else {
-            arrayProd.push(producto)
-        }
+    if (producto.codigo === codigo) {
+      const newObj = {
+        codigo,
+        categoria: categoriaModal,
+        descripcion: descripcionModal,
+        imagen: imagenModal,
+        nombre: nombreModal,
+        precio: precioModal,
+        stock: stockModal,
+      };
+      arrayProd.push(newObj);
+    } else {
+      arrayProd.push(producto);
     }
+  }
 
-
-    localStorage.removeItem('listaComponentesKey')
-    localStorage.setItem('listaComponentesKey', JSON.stringify(arrayProd))
-    window.location.href = '../pages/admin.html'
-}
+  localStorage.removeItem("listaComponentesKey");
+  localStorage.setItem("listaComponentesKey", JSON.stringify(arrayProd));
+  window.location.href = "../pages/admin.html";
+};

@@ -46,7 +46,7 @@ function crearColumna(producto) {
   console.log(producto);
   padre.innerHTML += ` <article class="card col-md-3 m-3" style="width: 18rem;">
   <img src="${producto.imagen}" class="card-img-top h-100 w-100" alt="${producto.nombre}">
-  <div class="card-body">
+  <div class="card-body ${producto.categoria}">
       <h5 class="card-title">${producto.nombre}</h5>
       <p class="card-text">Precio:${producto.precio} </p>
       <button class="btn btn-primary" type="button" onclick="verDetalle('${producto.codigo}')">Ver mas</button>
@@ -54,8 +54,9 @@ function crearColumna(producto) {
 </article>`;
 }
 
-function verDetalle(codigo){
-  window.location.href = window.location.origin+'/pages/verDetalle.html?codigo='+codigo
+function verDetalle(codigo) {
+  window.location.href =
+    window.location.origin + "/pages/verDetalle.html?codigo=" + codigo;
 }
 
 function buscar() {
@@ -63,22 +64,23 @@ function buscar() {
   input = document.getElementById("inputBuscar");
   filter = input.value.toUpperCase();
   section = document.getElementById("mySection");
-  articles = section.getElementsByTagName("article"); 
-
+  articles = section.getElementsByTagName("article");
 
   for (i = 0; i < articles.length; i++) {
-    let h5= articles[i].getElementsByClassName("card-body")[0].getElementsByClassName("card-title");
+    h5 = articles[i]
+      .getElementsByClassName("card-body")[0]
+      .getElementsByClassName("card-title");
     if (h5) {
       let palabrasEnFiltro = filter.split(" ");
-  
-      for (let filtro of palabrasEnFiltro) {
 
+      for (let filtro of palabrasEnFiltro) {
         if (h5[0].innerHTML.toUpperCase().indexOf(filter) > -1) {
           articles[i].style.display = "flex";
-        }else{
+        } else {
           articles[i].style.display = "none";
         }
       }
     }
   }
 }
+
