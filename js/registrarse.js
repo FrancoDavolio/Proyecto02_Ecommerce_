@@ -40,7 +40,7 @@ function crearPersona(e) {
       //guardar en local storage
       guardarUsuarioEnLocalStorage();
       console.log(listaUsuario)
-      window.location.href = 'http://127.0.0.1:5500/Proyecto02_Ecommerce_TecnoRolling/pages/admin.html'
+      window.location.href = 'https://componentecompu.netlify.app/'
       //reseteo los datos del formulario 
       registro.reset();
      
