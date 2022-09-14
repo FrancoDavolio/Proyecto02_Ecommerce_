@@ -40,10 +40,14 @@ function crearPersona(e) {
       //guardar en local storage
       guardarUsuarioEnLocalStorage();
       console.log(listaUsuario)
+<<<<<<< HEAD
       console.log(window.location.origin+'/pages/admin.html');
       window.location.href = window.location.origin+'/pages/admin.html'
       
       
+=======
+      window.location.href = 'https://componentecompu.netlify.app/'
+>>>>>>> 022a6bddee3c9a2939a95816edfe7ffddc3c6800
       //reseteo los datos del formulario 
       registro.reset();
      
