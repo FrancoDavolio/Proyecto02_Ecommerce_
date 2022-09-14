@@ -46,7 +46,7 @@ export function validarCodigo(input) {
   }
 
   export function validarPrecio(input) {
-    if (input.value.length >= 3 && input.value.length <= 80) {
+    if (input.value.length >= 1 && input.value.length <= 80) {
       console.log("dato correcto");
       input.className = "form-control is-valid";
       return true;
@@ -58,7 +58,7 @@ export function validarCodigo(input) {
   }
 
   export function validarStock(input) {
-    if (input.value.length >= 3 && input.value.length <= 80) {
+    if (input.value.length >= 1 && input.value.length <= 80) {
       console.log("dato correcto");
       input.className = "form-control is-valid";
       return true;
