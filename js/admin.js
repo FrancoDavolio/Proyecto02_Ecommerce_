@@ -250,7 +250,7 @@ window.borrarProducto = function (codigo) {
   );
   console.log(compFiltrado);
   localStorage.setItem("listaComponentesKey", JSON.stringify(compFiltrado));
-  location.href = "https://componentecompu.netlify.app/pages/admin.html";
+  location.href = "../pages/admin.html";
 };
 
 window.modificar = function (codigo) {
@@ -284,5 +284,5 @@ window.modificar = function (codigo) {
 
   localStorage.removeItem("listaComponentesKey");
   localStorage.setItem("listaComponentesKey", JSON.stringify(arrayProd));
-  window.location.href = "https://componentecompu.netlify.app/pages/admin.html";
+  window.location.href = "../pages/admin.html";
 };
