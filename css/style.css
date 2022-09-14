@@ -15,8 +15,8 @@ body {
 
 main {
     flex-grow: 1;
-    /* position: relative;
-    z-index: 0; */
+    position: relative;
+    z-index: 0;
 }
 
 .fuente {
