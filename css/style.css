@@ -96,6 +96,11 @@ header {
 
 /*PAGINA REGISTRARSE*/
 
+.centrado{
+    display: flex;
+    justify-content: center
+}
+
 #fondopag{
     background-image: url(../img/banner1.webp) ;
     background-repeat: no-repeat;
@@ -111,7 +116,7 @@ header {
     border-radius: 10px;
     height: 520px;
     width: 600px;
-    margin-left: 370px;
+   
     margin-top: 40px;
    
 }
@@ -152,15 +157,7 @@ header {
 }
 
 @media all and (max-width: 767px){
-    .box{
-        background: hsla(0, 1%, 26%, 0.6);
-        border-radius: 10px;
-        height: 500px;
-        width:340px;
-        margin-left: 11px;
-        margin-top: 40px;
-       
-    }
+   
 
     .btnIngresar{
         margin-left: 100px;
@@ -173,7 +170,7 @@ header {
         border-radius: 10px;
         height: 500px;
         width: 340px;
-        margin-left: 11px;
+       
         
         margin-top: 40px;
         margin-bottom: 10px;
@@ -195,41 +192,28 @@ header {
 }
 
 @media all and (min-width: 767px) and (max-width: 991px){
-    .box{
-        background: hsla(0, 1%, 26%, 0.6);
-        border-radius: 10px;
-        height: 500px;
-        width:340px;
-        margin-left: 10px;
-        margin-top: 120px;
-       
-    }
+   
 
-    .btnIngresar{
-        margin-left: 100px;
-        margin-top: 30px;
-        width: 40%;
-       
-    }
+    
     .boxRegistrarse{
         background: hsla(0, 1%, 26%, 0.6);
         border-radius: 10px;
-        height: 500px;
-        width: 340px;
-        margin-left: 25px;
+        height: 512px;
+        width: 450px;
+      
         
         margin-top: 120px;
         margin-bottom: 10px;
        
     }
     .tituloRegistrarse{
-        margin-left: 60px;
+        margin-left: 100px;
        
        
     }
     .btnRegistrarse{
-        margin-left: 100px;
-        margin-top: 10px;
+        margin-left: 130px;
+        margin-top: 30px;
         width: 40%;
        
         
