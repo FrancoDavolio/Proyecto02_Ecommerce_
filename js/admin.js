@@ -1,4 +1,4 @@
-import { Producto } from "./class.js";
+import { Producto } from './class.js'
 import {
   validarCodigo,
   validarNombre,
@@ -7,61 +7,57 @@ import {
   validarPrecio,
   validarCategoria,
   validarStock,
-} from "./helpers.js";
+} from './helpers.js'
 
 let listadeComponentes =
-  JSON.parse(localStorage.getItem("listaComponentesKey")) || [];
+  JSON.parse(localStorage.getItem('listaComponentesKey')) || []
 
-//traer los input
-let codigo = document.querySelector("#codigo");
-let nombre = document.querySelector("#nombre");
-let descripcion = document.querySelector("#descripcion");
-let imagen = document.querySelector("#imagen");
-let precio = document.querySelector("#precio");
-let stock = document.querySelector("#stock");
-let categoria = document.querySelector("#categoria");
-let formComponentes = document.querySelector("#formComponentes");
-let guargarComp = document.querySelector("#guargarComp");
-let btnCrearComp = document.querySelector("#btnCrearComp");
-let tBody = document.querySelector("#tBodyTabla");
+let codigo = document.querySelector('#codigo')
+let nombre = document.querySelector('#nombre')
+let descripcion = document.querySelector('#descripcion')
+let imagen = document.querySelector('#imagen')
+let precio = document.querySelector('#precio')
+let stock = document.querySelector('#stock')
+let categoria = document.querySelector('#categoria')
+let formComponentes = document.querySelector('#formComponentes')
+let btnCrearComp = document.querySelector('#btnCrearComp')
+let tBody = document.querySelector('#tBodyTabla')
 
 const modalAdminComponentes = new bootstrap.Modal(
-  document.querySelector("#modalComp")
-);
+  document.querySelector('#modalComp'),
+)
 
-btnCrearComp.addEventListener("click", crearComp);
-formComponentes.addEventListener("submit", guardarComponente);
+btnCrearComp.addEventListener('click', crearComp)
+formComponentes.addEventListener('submit', guardarComponente)
 
 function crearComp() {
-  modalAdminComponentes.show();
-  codigo.value = uuidv4();
+  modalAdminComponentes.show()
+  codigo.value = uuidv4()
 }
-// console.log(uuidv4());
 
-codigo.addEventListener("blur", () => {
-  validarCodigo(codigo);
-});
-nombre.addEventListener("blur", () => {
-  validarNombre(nombre);
-});
-descripcion.addEventListener("blur", () => {
-  validarDescripcion(descripcion);
-});
-imagen.addEventListener("blur", () => {
-  validarUrl(imagen);
-});
-precio.addEventListener("blur", () => {
-  validarPrecio(precio);
-});
-stock.addEventListener("blur", () => {
-  validarStock(stock);
-});
-categoria.addEventListener("blur", () => {
-  validarCategoria(categoria);
-});
+codigo.addEventListener('blur', () => {
+  validarCodigo(codigo)
+})
+nombre.addEventListener('blur', () => {
+  validarNombre(nombre)
+})
+descripcion.addEventListener('blur', () => {
+  validarDescripcion(descripcion)
+})
+imagen.addEventListener('blur', () => {
+  validarUrl(imagen)
+})
+precio.addEventListener('blur', () => {
+  validarPrecio(precio)
+})
+stock.addEventListener('blur', () => {
+  validarStock(stock)
+})
+categoria.addEventListener('blur', () => {
+  validarCategoria(categoria)
+})
 
-function guardarComponente(e) {
-  e.preventDefault();
+function guardarComponente() {
   if (
     validarCodigo(codigo) === true &&
     validarNombre(nombre) === true &&
@@ -78,25 +74,21 @@ function guardarComponente(e) {
       imagen.value,
       precio.value,
       stock.value,
-      categoria.value
-    );
-    console.log(Producto);
-    listadeComponentes.push(nuevoProducto);
-    limpiarFormulario();
-    console.log(listadeComponentes);
-    modalAdminComponentes.hide();
+      categoria.value,
+    )
+    listadeComponentes.push(nuevoProducto)
+    limpiarFormulario()
+    modalAdminComponentes.hide()
     localStorage.setItem(
-      "listaComponentesKey",
-      JSON.stringify(listadeComponentes)
-    );
+      'listaComponentesKey',
+      JSON.stringify(listadeComponentes),
+    )
   }
 }
 
 function limpiarFormulario() {
-  formComponentes.reset();
+  formComponentes.reset()
 }
-
-console.log("lista", listadeComponentes);
 
 tBody.innerHTML = listadeComponentes.map(
   (product) =>
@@ -107,7 +99,7 @@ tBody.innerHTML = listadeComponentes.map(
     <td>${product.imagen}</td>
     <td>${product.stock}</td>
     <td>${product.categoria}</td>
-    <td>${product.precio}</td>
+    <td>$${product.precio}</td>
     <td>
 
     <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal${product.codigo}">
@@ -171,7 +163,7 @@ tBody.innerHTML = listadeComponentes.map(
                   <label for="precio">Precio</label>
                   <input 
                   id="precioModalMod" 
-                  type="text"
+                  type="number"
                   class="form-control" 
                   value="${product.precio}"
                   placeholder="$123">
@@ -180,7 +172,7 @@ tBody.innerHTML = listadeComponentes.map(
                   <label for="stock">Stock</label>
                   <input 
                   id="stockModalMod" 
-                  type="text" 
+                  type="number" 
                   class="form-control" 
                   value="${product.stock}"
                   placeholder="1">
@@ -209,14 +201,14 @@ tBody.innerHTML = listadeComponentes.map(
              
           </form>
       </div>
-          </div>
+    </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
             <button type="button" class="btn btn-primary"onclick='modificar("${product.codigo}")'>Aceptar</button>
           </div>
-        </div>
-      </div>
     </div>
+  </div>
+</div>
         
     <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal1${product.codigo}">
     <i class="bi bi-x-square"></i>
@@ -234,37 +226,38 @@ tBody.innerHTML = listadeComponentes.map(
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
             <button type="button" class="btn btn-danger" onclick='borrarProducto("${product.codigo}")'>Borrar</button>
         </div>
-        </div>
+    </div>
     </div>
     </div>
 
 
     </td>
 
-    </tr>`
-);
+    </tr>`,
+)
 
 window.borrarProducto = function (codigo) {
   let compFiltrado = listadeComponentes.filter(
-    (componente) => componente.codigo != codigo
-  );
-  console.log(compFiltrado);
-  localStorage.setItem("listaComponentesKey", JSON.stringify(compFiltrado));
-  location.href = "../pages/admin.html";
-};
+    (componente) => componente.codigo != codigo,
+  )
 
-window.modificar = function (codigo) {
-  let nombreModal = document.querySelector("#nombreModalMod").value;
-  let descripcionModal = document.querySelector("#descripcionModalMod").value;
-  let imagenModal = document.querySelector("#imagenModalMod").value;
-  let precioModal = document.querySelector("#precioModalMod").value;
-  let stockModal = document.querySelector("#stockModalMod").value;
-  let categoriaModal = document.querySelector("#categoriaModalMod").value;
+  localStorage.setItem('listaComponentesKey', JSON.stringify(compFiltrado))
+  location.href = '../pages/admin.html'
+}
 
-  const arrayProd = [];
-
+window.modificar = async function (codigo) {
+  
+  let nombreModal = document.querySelector('#nombreModalMod').value
+  let descripcionModal = document.querySelector('#descripcionModalMod').value
+  let imagenModal = document.querySelector('#imagenModalMod').value
+  let precioModal = document.querySelector('#precioModalMod').value
+  let stockModal = document.querySelector('#stockModalMod').value
+  let categoriaModal = document.querySelector('#categoriaModalMod').value
+  
+  const arrayProd = []
+  
   for (let i = 0; i < listadeComponentes.length; i++) {
-    const producto = listadeComponentes[i];
+    const producto = listadeComponentes[i]
 
     if (producto.codigo === codigo) {
       const newObj = {
@@ -275,14 +268,23 @@ window.modificar = function (codigo) {
         nombre: nombreModal,
         precio: precioModal,
         stock: stockModal,
-      };
-      arrayProd.push(newObj);
+      }
+      arrayProd.push(newObj)
+      await Swal.fire({
+        title: 'Editado correctamente',
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        }
+      }) 
     } else {
-      arrayProd.push(producto);
+      arrayProd.push(producto)
     }
   }
 
-  localStorage.removeItem("listaComponentesKey");
-  localStorage.setItem("listaComponentesKey", JSON.stringify(arrayProd));
-  window.location.href = "../pages/admin.html";
-};
+  localStorage.removeItem('listaComponentesKey')
+  localStorage.setItem('listaComponentesKey', JSON.stringify(arrayProd))
+  window.location.href = '../pages/admin.html'
+}
