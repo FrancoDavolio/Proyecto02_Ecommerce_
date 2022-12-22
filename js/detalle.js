@@ -1,20 +1,14 @@
-//tomar el parametro de la url
-let parametro = window.location.search;
-console.log(parametro);
+let parametro = window.location.search
 
-let urlParametro = new URLSearchParams(parametro);
-console.log(urlParametro.get('codigo'));
+let urlParametro = new URLSearchParams(parametro)
 
-//buscar dentro del localstorage el componente que tiene el mismo codigo
 let listadeComponentes =
-  JSON.parse(localStorage.getItem("listaComponentesKey")) || [];
+  JSON.parse(localStorage.getItem('listaComponentesKey')) || []
 let componenteBuscado = listadeComponentes.find(
-  (producto) => producto.codigo === urlParametro.get("codigo")
-);
-console.log(componenteBuscado);
+  (producto) => producto.codigo === urlParametro.get('codigo'),
+)
 
-//dibujar la card con los datos del componente
-let seccionDetalle = document.querySelector("#seccionDetalle");
+let seccionDetalle = document.querySelector('#seccionDetalle')
 seccionDetalle.innerHTML = `<div class="card mb-3">
 <div class="row justify-content-between">
     <div class="col-md-4">
@@ -24,8 +18,8 @@ seccionDetalle.innerHTML = `<div class="card mb-3">
         <div class="card-body">
             <h5 class="card-title">${componenteBuscado.nombre}</h5>
             <p class="card-text">${componenteBuscado.descripcion}</p>
-            <p class="card-text">Stock: ${componenteBuscado.stock} unidades</p>
-            <p class="card-text">Precio: ${componenteBuscado.precio}</p>
+            <p class="card-text">Stock: ${componenteBuscado.stock} unidad</p>
+            <p class="card-text">Precio: $${componenteBuscado.precio}</p>
             <p class="card-text">Categoria: ${componenteBuscado.categoria}</p>
         </div>
         <div>

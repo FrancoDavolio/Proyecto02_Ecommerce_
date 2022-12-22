@@ -73,11 +73,11 @@
                                     </div>
                                     <div class="mb-3">
                                         <label for="precio">Precio</label>
-                                        <input id="precio" type="text" class="form-control" placeholder="$123">
+                                        <input id="precio" type="number" class="form-control" placeholder="$123">
                                     </div>
                                     <div class="mb-3">
                                         <label for="stock">Stock</label>
-                                        <input id="stock" type="text" class="form-control" placeholder="1">
+                                        <input id="stock" type="number" class="form-control" placeholder="1">
                                     </div>
                                     <div class="mb-3">
                                         <label for="categoria">Categoria</label>
@@ -99,7 +99,6 @@
                                             <option value="notebooks">Notebooks</option>
                                         </select>
                                     </div>
-                                    <!-- <button class="btn btn-primary" type="submit">Guardar</button> -->
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
                                             data-bs-dismiss="modal">Cerrar</button>
@@ -159,6 +158,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
     <script src="../js/admin.js" type="module"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
